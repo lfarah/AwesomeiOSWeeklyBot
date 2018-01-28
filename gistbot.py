@@ -11,7 +11,7 @@ import os
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-ghGist = Simplegist(username= 'lfarah', api_token= 'aab40008a8ef08521636c172487c0b995c67b0df')
+ghGist = Simplegist(username= 'lfarah', api_token= '')
 
 def getGist(index):
     lastGist = ghGist.profile().listall()[index]
