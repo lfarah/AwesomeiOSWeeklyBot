@@ -35,12 +35,14 @@ header = "<h1 id=\"awesomeiosweekly" + libNumber  + "\">AwesomeiOS.Weekly [" + l
 footer = "That's all for this week! Please <a href=\"mailto:lucas.farah@me.com?Subject=Hello%20again\" target=\"_top\">give us feedback</a> and <a href=\"https://twitter.com/intent/tweet?text=AwesomeiOS%20weekly%20" + libNumber + "%20is%20out!%20http://bit.ly/2lJvy0P\" target=\"_top\">share on Twitter</a></h5></html>"
 
 with open('header.html','r') as headerFile:
-    header = headerFile.read() + announcementsHTML
+    # header = headerFile.read() + announcementsHTML
+    header = headerFile.read()
     with open('links.html','r') as linksFile:
         links = linksFile.read() + linksHTML
         header += links
         with open('libraries.html','r') as librariesFile:
             libraries = librariesFile.read() + librariesHTML
+            print libraries
             header += libraries
             with open('footer.html','r') as footerFile:
                 footer = footerFile.read()
